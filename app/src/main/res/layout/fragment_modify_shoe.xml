@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="ui.add.AddShoesFragment">
+
+    <LinearLayout
+        android:id="@+id/edittext_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <EditText
+            android:id="@+id/brand_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext_background_blue_borders"
+            android:ems="50"
+            android:hint="@string/brand"
+            android:inputType="textCapWords"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/dark_gray"
+            android:textColorHint="@color/light_gray" />
+
+
+        <EditText
+            android:id="@+id/size_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext_background_blue_borders"
+            android:ems="50"
+            android:hint="@string/shoe_size"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/dark_gray"
+            android:textColorHint="@color/light_gray" />
+
+
+        <EditText
+            android:id="@+id/color_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext_background_blue_borders"
+            android:ems="50"
+            android:hint="@string/color"
+            android:inputType="textCapWords"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/dark_gray"
+            android:textColorHint="@color/light_gray" />
+
+        <EditText
+            android:id="@+id/price_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittext_background_blue_borders"
+            android:ems="50"
+            android:hint="@string/price"
+            android:inputType="numberDecimal"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/dark_gray"
+            android:textColorHint="@color/light_gray" />
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/default_button_state"
+            android:text="@string/modify"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        style="?android:progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:progress="80"
+        android:progressDrawable="@drawable/circle"
+        android:visibility="invisible" />
+
+
+</LinearLayout>

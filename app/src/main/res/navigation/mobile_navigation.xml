@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_signup">
+
+    <fragment
+        android:id="@+id/nav_signup"
+        android:name="com.afrifanom.inventoryapp.ui.signup.SignUpFragment"
+        android:label="@string/signup" >
+        <action
+            android:id="@+id/action_nav_signup_to_nav_login"
+            app:destination="@id/nav_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_shoes"
+        android:name="com.afrifanom.inventoryapp.ui.add.AddShoesFragment"
+        android:label="@string/add_shoes"
+        tools:layout="@layout/fragment_add_shoe" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.afrifanom.inventoryapp.ui.view.ViewShoesFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_view_shoes" >
+        <action
+            android:id="@+id/action_nav_gallery_to_modify"
+            app:destination="@id/nav_modify_shoes" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.afrifanom.inventoryapp.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.afrifanom.inventoryapp.ui.login.LoginFragment"
+        android:label="@string/login" >
+        <action
+            android:id="@+id/action_nav_login_to_nav_add_shoes"
+            app:destination="@id/nav_add_shoes" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_modify_shoes"
+        android:name="com.afrifanom.inventoryapp.ui.modify.ModifyShoesFragment"
+        android:label="@string/modify" />
+
+</navigation>

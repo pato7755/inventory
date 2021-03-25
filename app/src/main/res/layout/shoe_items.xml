@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    tools:context=".ui.view.ViewShoesFragment">
+
+    <TextView
+        android:id="@+id/brand_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/size_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="size"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintStart_toStartOf="@id/brand_textview"
+        app:layout_constraintTop_toBottomOf="@id/brand_textview" />
+
+    <TextView
+        android:id="@+id/dot_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/u2022_bullet"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintStart_toEndOf="@id/size_textview"
+        app:layout_constraintTop_toBottomOf="@id/brand_textview" />
+
+    <TextView
+        android:id="@+id/color_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="color"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintStart_toEndOf="@id/dot_textview"
+        app:layout_constraintTop_toBottomOf="@id/brand_textview" />
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/size_textview"
+        app:layout_constraintBottom_toBottomOf="@id/size_textview"
+        android:src="@android:drawable/ic_menu_delete"
+        android:contentDescription="@string/hint" />
+
+    <ImageButton
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/delete_button"
+        app:layout_constraintTop_toTopOf="@id/size_textview"
+        app:layout_constraintBottom_toBottomOf="@id/size_textview"
+        android:src="@android:drawable/ic_menu_edit"
+        android:contentDescription="@string/hint" />
+
+
+
+    <TextView
+        android:id="@+id/price_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="price"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintStart_toStartOf="@id/size_textview"
+        app:layout_constraintTop_toBottomOf="@id/size_textview" />
+
+    <TextView
+        android:id="@+id/shoe_id_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/dark_gray"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/dot_textview"
+        app:layout_constraintTop_toBottomOf="@id/brand_textview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
